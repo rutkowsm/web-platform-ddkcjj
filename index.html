@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const customer = {
+        first_name: 'Bob',
+        last_name: 'Dylan',
+      };
+      const h1 = React.createElement(
+        'h1',
+        null,
+        `My name is ${customer.first_name}`
+      );
+      const h2 = React.createElement(
+        'h2',
+        null,
+        `My last name is ${customer.last_name}`
+      );
+      const container = React.createElement('div', null, h1, h2);
+      ReactDOM.render(container, document.getElementById('root'));
+    </script>
+  </body>
+</html>
